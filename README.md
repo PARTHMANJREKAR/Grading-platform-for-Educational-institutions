@@ -35,8 +35,38 @@ This repository contains a web application designed for teachers and professors 
 
 ****Prerequisites****
 
-DJANGO and python (latest version) installed)
-[Database Management System] (e.g., SQlite)
+Python (latest version) installed
+
+Database Management System: SQlite
+
+To install Django and setup this project, follow the instructions
+
+watch this video for installation if you are a beginner: https://youtu.be/f1NQnhFFV-E?si=jibVBBsnAcwz90gH
+
+Go to cmd.
+
+pip --version ( if pip is preinstalled )
+else 
+get-pip.py
+
+Go to the terminal. 
+
+pip install django
+
+Go to terminal.
+
+copy the file path where the extracted zip of this project is stored.
+
+paste file path as,
+cd "copied file path"
+
+return to terminal.
+
+type "manage.py runserver".
+
+Go to Browser.
+
+type "http://localhost:8000/" to open the website.
 
 
 ## Steps
