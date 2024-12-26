@@ -1,6 +1,6 @@
 # Grading Website for Educational Institutions
 
-## Overview
+## Overview 
 
 This repository contains a web application designed for teachers and professors to streamline the grading process in educational institutions. The platform allows educators to manage grades, track student performance, and generate reports efficiently.
 
