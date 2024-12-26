@@ -4,6 +4,7 @@
 
 This repository contains a web application designed for teachers and professors to streamline the grading process in educational institutions. The platform allows educators to manage grades, track student performance, and generate reports efficiently.
 
+
 ## Features
 
 ****User Authentication****: Secure login for teachers and administrators.
@@ -18,6 +19,7 @@ This repository contains a web application designed for teachers and professors 
 
 ****Reports Generation****: Generate and export performance reports in various formats (PDF, Excel).
 
+
 ## Technology Stack
 
 ****Frontend****: HTML, CSS, JavaScript
@@ -28,12 +30,14 @@ This repository contains a web application designed for teachers and professors 
 
 ****Authentication****: OAuth 2.0
 
+
 ## Installation
 
 ****Prerequisites****
 
 DJANGO and python (latest version) installed)
 [Database Management System] (e.g., SQlite)
+
 
 ## Steps
 
@@ -65,6 +69,7 @@ npm start
 
 Access the application at http://localhost:3000.
 
+
 ## Usage
 
 Log in with your teacher/administrator credentials.
@@ -72,6 +77,7 @@ Log in with your teacher/administrator credentials.
 Navigate through the dashboard to manage students, grades, and reports.
 
 Customize grading criteria and generate insights via the analytics section.
+
 
 ## Contributing
 
@@ -85,14 +91,17 @@ Commit your changes with a descriptive message.
 
 Push to your branch and submit a pull request.
 
+
 ## License
 
 This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999.
+
 
 ## Acknowledgements
 
  DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE,
  SHAH AND ANCHOR KUTCHHI ENGINEERING COLLEGE, MUMBAI
+
 
 # Contact
 
