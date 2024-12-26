@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Marks Entry</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div id="menu-bar">
+        <div id="logo">
+            <img src="{% static 'logo.png' %}" alt="Logo">
+            <b>Student Marks Entry</b>
+        </div>
+        <!-- Add any additional elements to the menu bar if needed -->
+    </div>
+
+    <div id="content">
+        <h1>Enter Practical Marks</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div id="student-roll-display">
+                <label for="prn">Select Student (PRN):</label>
+                <select id="student-select" name="prn">
+                    {% for student in students %}
+                    <option value="{{ student.prn }}">{{ student.name }} ({{ student.prn }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="group-box">
+                <div class="group-title">Marks Entry</div>
+
+                <label for="practical_write_up">Write-Up Marks (out of 5):</label>
+                <input type="number" id="practical_write_up" name="practical_write_up" class="input-field" max="5" required>
+
+                <label for="component1_marks">Component 1 Marks (out of 20):</label>
+                <input type="number" id="component1_marks" name="component1_marks" class="input-field" max="20" required>
+
+                <label for="component2_marks">Component 2 Marks (out of 20):</label>
+                <input type="number" id="component2_marks" name="component2_marks" class="input-field" max="20" required>
+
+                <label for="attendance">Attendance Marks (out of 5):</label>
+                <input type="number" id="attendance" name="attendance" class="input-field" max="5" required>
+
+                <label for="end_sem_practical">End-Sem Practical Marks (out of 100):</label>
+                <input type="number" id="end_sem_practical" name="end_sem_practical" class="input-field" max="100" required>
+            </div>
+
+            <div class="group-separator"></div>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="window.location.href='{% url 'practical_marks' next_student_prn %}'">Next Student</button>
+        </form>
+    </div>
+</body>
+</html>
