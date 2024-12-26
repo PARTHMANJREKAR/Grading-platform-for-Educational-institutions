@@ -74,6 +74,9 @@ Access the application at http://localhost:3000.
 
 Log in with your teacher/administrator credentials.
 
+**Username:** user1
+**Password:** SAKEC123
+
 Navigate through the dashboard to manage students, grades, and reports.
 
 Customize grading criteria and generate insights via the analytics section.
