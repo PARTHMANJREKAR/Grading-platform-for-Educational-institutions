@@ -8,6 +8,8 @@ This repository contains a web application designed for teachers and professors 
 
 ****User Authentication****: Secure login for teachers and administrators.
 
+****User Friendly Design****: Simple interface for efficient use and performance.
+
 ****Grade Management****: Add, edit, and delete grades for students.
 
 ****Student Profiles****: Maintain detailed records of students, including grades, attendance, and comments.
@@ -16,25 +18,22 @@ This repository contains a web application designed for teachers and professors 
 
 ****Reports Generation****: Generate and export performance reports in various formats (PDF, Excel).
 
-****Analytics Dashboard****: Visualize student performance trends and class statistics.
-
 ## Technology Stack
 
-****Frontend****: HTML, CSS, JavaScript, and [React.js or Angular.js (if applicable)]
+****Frontend****: HTML, CSS, JavaScript
 
-****Backend****: [Node.js, Python (Flask/Django), or another backend framework]
+****Backend****: [Python (Django)]
 
-****Database****: [MySQL, PostgreSQL, or MongoDB]
+****Database****: [SQlite]
 
-****Authentication****: JWT or OAuth 2.0
+****Authentication****: OAuth 2.0
 
 ## Installation
 
 ****Prerequisites****
 
-Node.js and npm/yarn installed
-
-[Database Management System] (e.g., MySQL, MongoDB)
+DJANGO and python (latest version) installed)
+[Database Management System] (e.g., SQlite)
 
 ## Steps
 
@@ -92,9 +91,8 @@ This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1
 
 ## Acknowledgements
 
-[Framework/Library Name] for [specific use case].
-
-Open-source community for inspiration and tools.
+ DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE,
+ SHAH AND ANCHOR KUTCHHI ENGINEERING COLLEGE, MUMBAI
 
 # Contact
 
