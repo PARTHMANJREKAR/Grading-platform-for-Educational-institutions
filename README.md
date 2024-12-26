@@ -88,7 +88,7 @@ Push to your branch and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE Version 2.1, February 1999.
 
 ## Acknowledgements
 
