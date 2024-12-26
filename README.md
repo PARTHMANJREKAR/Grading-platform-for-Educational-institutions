@@ -24,9 +24,9 @@ This repository contains a web application designed for teachers and professors 
 
 ****Frontend****: HTML, CSS, JavaScript
 
-****Backend****: [Python (Django)]
+****Backend****: Python (Django)
 
-****Database****: [SQlite]
+****Database****: SQlite
 
 ****Authentication****: OAuth 2.0
 
