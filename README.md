@@ -71,7 +71,7 @@ type "http://localhost:8000/" to open the website.
 
 ## Steps
 
-****Clone the repository****: git clone https://github.com/your-username/grading-website.git
+****Clone the repository****: git clone https://github.com/PARTHMANJREKAR/Grading-platform-for-Educational-institutions.git
 
 ****Navigate to the project directory****:
 
