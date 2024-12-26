@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+#menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ACE7FF;
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+#logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+#logo b {
+    font-family: Aptos, sans-serif;
+    font-size: 20px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Content Area Styles */
+#content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border: 25px solid #0094FF;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: #c4e1ff;
+}
+
+/* Button Styles */
+.square-button {
+    display: inline-block;
+    width: 265px;
+    height: 265px;
+    margin: 30px;
+    background-color: #ACE7FF;
+    color: black;
+    text-align: center;
+    line-height: 265px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    border: 5px solid #1E90FF;
+}
+
+.square-button:hover {
+    background-color: #6BDBF2;
+}
+
+/* Heading Styles */
+h1 {
+    color: black;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label,
+form input {
+    margin: 10px 0;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Input Group Styles */
+.input-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    width: 60px;
+    text-align: center;
+}
+
+/* Group Box and Title */
+.group-box {
+    border: 2px solid #1E90FF;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #e6f4ff;
+}
+
+.group-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #ACE7FF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Go Back Button */
+.go-back-button {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.go-back-button:hover {
+    background-color: #104E8B;
+}
+
+/* Student Roll Display */
+#student-roll-display {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+    background-color: #ACE7FF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Student Select Dropdown */
+#student-select {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Group Separator */
+.group-separator {
+    margin: 20px 0;
+    border-bottom: 2px solid black;
+}
+
+/* Group Checkbox */
+.group-checkbox {
+    margin: 10px;
+}
+
+#menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ACE7FF;
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+#profile-photo-display img {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border: 25px solid #0094FF;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: #c4e1ff;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+label {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #c30010;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FF5050;
+}
+
