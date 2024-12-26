@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Marks</title>
+    <link rel="stylesheet" href="{% static 'global/styles.css' %}">
+    <style>
+        .go-back-button {
+            background-color: #ACE7FF;
+            color: black;
+            text-align: center;
+            line-height: 40px; /* Adjust line-height to center text vertically */
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            border: 5px solid #1E90FF;
+            margin: 20px;
+            padding: 10px 20px; /* Adjust padding as needed */
+        }
+        .go-back-button:hover {
+            background-color: #6BDBF2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="content">
+        <h1>Enter {{ request.session.type }} Marks for {{ request.session.component }}</h1>
+        <form action="{% url 'enter_marks' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="year" value="{{ request.session.year }}">
+            <input type="hidden" name="branch" value="{{ request.session.branch }}">
+            <input type="hidden" name="semester" value="{{ request.session.semester }}">
+            <input type="hidden" name="subject" value="{{ request.session.subject }}">
+            <input type="hidden" name="type" value="{{ request.session.type }}">
+            <input type="hidden" name="component" value="{{ request.session.component }}">
+
+            {% if request.session.type == 'Theory' %}
+                {{ form.as_p }}
+            {% elif request.session.type == 'Practical' %}
+                {% if request.session.component == 'PPT' %}
+                    <label for="ppt_content">Content (4 marks):</label>
+                    <input type="number" id="ppt_content" name="ppt_content" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="ppt_organization">Organization (4 marks):</label>
+                    <input type="number" id="ppt_organization" name="ppt_organization" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="ppt_design">Design (4 marks):</label>
+                    <input type="number" id="ppt_design" name="ppt_design" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="ppt_delivery">Delivery (4 marks):</label>
+                    <input type="number" id="ppt_delivery" name="ppt_delivery" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="ppt_audience_engagement">Audience Engagement (2 marks):</label>
+                    <input type="number" id="ppt_audience_engagement" name="ppt_audience_engagement" min="0" max="2" step="0.1" value="0"><br>
+                    <label for="ppt_qna">Q&A (2 marks):</label>
+                    <input type="number" id="ppt_qna" name="ppt_qna" min="0" max="2" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Group discussion' %}
+                    <label for="group_discussion_content_knowledge">Content Knowledge (5 marks):</label>
+                    <input type="number" id="group_discussion_content_knowledge" name="group_discussion_content_knowledge" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="group_discussion_communication_skills">Communication Skills (5 marks):</label>
+                    <input type="number" id="group_discussion_communication_skills" name="group_discussion_communication_skills" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="group_discussion_participation">Participation (5 marks):</label>
+                    <input type="number" id="group_discussion_participation" name="group_discussion_participation" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="group_discussion_team_work">Team Work (5 marks):</label>
+                    <input type="number" id="group_discussion_team_work" name="group_discussion_team_work" min="0" max="5" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Seminar presentation' %}
+                    <label for="seminar_content">Content (5 marks):</label>
+                    <input type="number" id="seminar_content" name="seminar_content" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="seminar_organization">Organization (5 marks):</label>
+                    <input type="number" id="seminar_organization" name="seminar_organization" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="seminar_presentation_skills">Presentation Skills (5 marks):</label>
+                    <input type="number" id="seminar_presentation_skills" name="seminar_presentation_skills" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="seminar_visual_aids">Visual Aids (3 marks):</label>
+                    <input type="number" id="seminar_visual_aids" name="seminar_visual_aids" min="0" max="3" step="0.1" value="0"><br>
+                    <label for="seminar_response_to_questions">Response to Questions (2 marks):</label>
+                    <input type="number" id="seminar_response_to_questions" name="seminar_response_to_questions" min="0" max="2" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Quiz' %}
+                    <label for="quiz_mcqs">MCQs (10 marks):</label>
+                    <input type="number" id="quiz_mcqs" name="quiz_mcqs" min="0" max="10" step="0.1" value="0"><br>
+                    <label for="quiz_short_answer_questions">Short Answer Questions (10 marks):</label>
+                    <input type="number" id="quiz_short_answer_questions" name="quiz_short_answer_questions" min="0" max="10" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Case study' %}
+                    <label for="case_study_understanding">Understanding (4 marks):</label>
+                    <input type="number" id="case_study_understanding" name="case_study_understanding" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="case_study_analysis_and_application">Analysis and Application (5 marks):</label>
+                    <input type="number" id="case_study_analysis_and_application" name="case_study_analysis_and_application" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="case_study_solution">Solution (4 marks):</label>
+                    <input type="number" id="case_study_solution" name="case_study_solution" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="case_study_organization">Organization (3 marks):</label>
+                    <input type="number" id="case_study_organization" name="case_study_organization" min="0" max="3" step="0.1" value="0"><br>
+                    <label for="case_study_clarity">Clarity (2 marks):</label>
+                    <input type="number" id="case_study_clarity" name="case_study_clarity" min="0" max="2" step="0.1" value="0"><br>
+                    <label for="case_study_references">References (2 marks):</label>
+                    <input type="number" id="case_study_references" name="case_study_references" min="0" max="2" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Design thinking' %}
+                    <label for="design_thinking_problem_definition">Problem Definition (4 marks):</label>
+                    <input type="number" id="design_thinking_problem_definition" name="design_thinking_problem_definition" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="design_thinking_ideation">Ideation (4 marks):</label>
+                    <input type="number" id="design_thinking_ideation" name="design_thinking_ideation" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="design_thinking_prototyping">Prototyping (4 marks):</label>
+                    <input type="number" id="design_thinking_prototyping" name="design_thinking_prototyping" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="design_thinking_testing">Testing (4 marks):</label>
+                    <input type="number" id="design_thinking_testing" name="design_thinking_testing" min="0" max="4" step="0.1" value="0"><br>
+                    <label for="design_thinking_reflection">Reflection (2 marks):</label>
+                    <input type="number" id="design_thinking_reflection" name="design_thinking_reflection" min="0" max="2" step="0.1" value="0"><br>
+                {% elif request.session.component == 'Innovation' %}
+                    <label for="innovation_originality">Originality (5 marks):</label>
+                    <input type="number" id="innovation_originality" name="innovation_originality" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="innovation_impact">Impact (5 marks):</label>
+                    <input type="number" id="innovation_impact" name="innovation_impact" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="innovation_feasibility">Feasibility (5 marks):</label>
+                    <input type="number" id="innovation_feasibility" name="innovation_feasibility" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="innovation_implementation_strategy">Implementation Strategy (5 marks):</label>
+                    <input type="number" id="innovation_implementation_strategy" name="innovation_implementation_strategy" min="0" max="5" step="0.1" value="0"><br>
+                    <label for="innovation_creativity">Creativity (5 marks):</label>
+                    <input type="number" id="innovation_creativity" name="innovation_creativity" min="0" max="5" step="0.1" value="0"><br>
+                {% endif %}
+            {% endif %}
+
+            <button type="submit" class="go-back-button">Submit Marks</button>
+        </form>
+    </div>
+</body>
+</html>
