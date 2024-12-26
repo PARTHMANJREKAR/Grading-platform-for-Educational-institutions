@@ -1,10 +1,10 @@
 # Grading Website for Educational Institutions
 
-****Overview****
+##Overview
 
 This repository contains a web application designed for teachers and professors to streamline the grading process in educational institutions. The platform allows educators to manage grades, track student performance, and generate reports efficiently.
 
-****Features****
+##Features
 
 ****User Authentication****: Secure login for teachers and administrators.
 
@@ -18,7 +18,7 @@ This repository contains a web application designed for teachers and professors 
 
 ****Analytics Dashboard****: Visualize student performance trends and class statistics.
 
-****Technology Stack****
+##Technology Stack
 
 ****Frontend****: HTML, CSS, JavaScript, and [React.js or Angular.js (if applicable)]
 
@@ -28,7 +28,7 @@ This repository contains a web application designed for teachers and professors 
 
 ****Authentication****: JWT or OAuth 2.0
 
-****Installation****
+##Installation
 
 ****Prerequisites****
 
@@ -36,7 +36,7 @@ Node.js and npm/yarn installed
 
 [Database Management System] (e.g., MySQL, MongoDB)
 
-****Steps****
+##Steps
 
 ****Clone the repository****: git clone https://github.com/your-username/grading-website.git
 
@@ -66,7 +66,7 @@ npm start
 
 Access the application at http://localhost:3000.
 
-Usage
+##Usage
 
 Log in with your teacher/administrator credentials.
 
@@ -74,7 +74,7 @@ Navigate through the dashboard to manage students, grades, and reports.
 
 Customize grading criteria and generate insights via the analytics section.
 
-Contributing
+##Contributing
 
 ****Contributions are welcome! Please follow these steps****:
 
@@ -86,17 +86,17 @@ Commit your changes with a descriptive message.
 
 Push to your branch and submit a pull request.
 
-****License****
+##License
 
 This project is licensed under the MIT License.
 
-****Acknowledgements****
+##Acknowledgements
 
 [Framework/Library Name] for [specific use case].
 
 Open-source community for inspiration and tools.
 
-****Contact****
+#Contact
 
 For questions or feedback, please contact: parthmanjrekar2546@gmail.com 
 
